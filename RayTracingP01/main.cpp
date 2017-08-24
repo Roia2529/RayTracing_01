@@ -7,9 +7,31 @@
 //
 
 #include <iostream>
+#include "viewport.cpp"
+#include "xmlload.cpp"
+
+using namespace std;
+
+Node rootNode;
+Camera camera;
+RenderImage renderImage;
+
+
+void BeginRender()
+{
+    
+    
+    
+}
+
+void StopRender(){
+    
+    
+}
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Hello, World!\n";
     return 0;
 }
