@@ -13,7 +13,12 @@
 #include "scene.h"
 #include "objects.h"
 #include <stdlib.h>
-#include <GLUT/glut.h>
+#if __APPLE__
+    #include <GLUT/glut.h>
+#else
+    #include <GL/glut.h>
+#endif
+
 #include <time.h>
 
 //-------------------------------------------------------------------------------
@@ -414,3 +419,6 @@ void Sphere::ViewportDisplay() const
 }
 //-------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------
+//bool Sphere::IntersectRay( const Ray &ray, HitInfo &hInfo, int hitSide ) const{
+//	return true;
+//}

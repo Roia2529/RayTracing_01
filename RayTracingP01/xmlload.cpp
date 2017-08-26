@@ -19,7 +19,7 @@
 extern Node rootNode;
 extern Camera camera;
 extern RenderImage renderImage;
-Sphere theSphere;
+//Sphere theSphere;
 
 //-------------------------------------------------------------------------------
  

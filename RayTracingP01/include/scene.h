@@ -320,6 +320,15 @@ public:
 		}
 	}
 
+	/**
+	* change the color of pixel on &img+pos
+	**/
+	void setPixel(int pos, Color24 col, float zfloat){
+		img[pos] = col;
+		//zbuffer[pos] = zfloat;
+		IncrementNumRenderPixel(1);
+	}
+
 	bool SaveImage (const char *filename) const { return SavePNG(filename,&img[0].r,3); }
 	bool SaveZImage(const char *filename) const { return SavePNG(filename,zbufferImg,1); }
 
