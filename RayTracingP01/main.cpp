@@ -111,12 +111,12 @@ void BeginRender()
     b.x+=u/2;
     b.y+=v/2;
 
-    Point3 y_new = camera.dir - camera.pos;
-    Point3 x_new = camera.up ^ y_new;
+    Point3 z_new = -1*(camera.dir);
+    Point3 x_new = camera.up ^ z_new;
     camera.up.Normalize();
-    y_new.Normalize();
+    z_new.Normalize();
     x_new.Normalize();
-    Matrix3 m(x_new,camera.up, y_new);
+    Matrix3 m(x_new,camera.up, z_new);
 
 
     for(int j=0;j<camera.imgHeight;j++){
@@ -124,7 +124,7 @@ void BeginRender()
     		Point3 tmp(i*u,j*v,0);
     		tmp+=b; 
     		Ray ray_pixel(camera.pos,tmp);
-    		//ray_pixel.dir=(ray_pixel.dir)*m;
+    		ray_pixel.dir=m*(ray_pixel.dir);
     		ray_pixel.dir.Normalize();
 
     		HitInfo hitinfo;
@@ -148,7 +148,7 @@ void BeginRender()
     
     cout << "Saving z-buffer image...\n";
     renderImage.ComputeZBufferImage();
-    renderImage.SaveZImage("/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/prj1.jpg");
+    renderImage.SaveZImage("/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/prj1.png");
     //renderImage.SaveImage("/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/prj1.jpg");
 }
 
@@ -162,7 +162,7 @@ void StopRender(){
 int main(int argc, const char * argv[]) {
     
     //const char *file = "simplescene.xml"; //can't load the file
-    const char *file = "/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/simplescene.xml";
+    const char *file = "/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/spherescene.xml";
     //const char *file = "spherescene.xml";
     LoadScene(file);
     ShowViewport();

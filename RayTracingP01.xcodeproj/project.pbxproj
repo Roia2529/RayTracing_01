@@ -11,7 +11,6 @@
 		F23CC7B71F4E741B00630365 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23CC7B61F4E741B00630365 /* GLUT.framework */; };
 		F23CC7B91F4E742200630365 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23CC7B81F4E742200630365 /* OpenGL.framework */; };
 		F23CC8B31F4E756A00630365 /* lodepng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F23CC8451F4E756A00630365 /* lodepng.cpp */; };
-		F23CC8B41F4E756A00630365 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F23CC8471F4E756A00630365 /* Makefile */; };
 		F23CC8B51F4E756A00630365 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F23CC8A41F4E756A00630365 /* Makefile */; };
 		F23CC8B61F4E756A00630365 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F23CC8A61F4E756A00630365 /* tinystr.cpp */; };
 		F23CC8B71F4E756A00630365 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F23CC8A81F4E756A00630365 /* tinyxml.cpp */; };
@@ -420,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23CC8B41F4E756A00630365 /* Makefile in Sources */,
 				F23CC8B71F4E756A00630365 /* tinyxml.cpp in Sources */,
 				F23CC8B61F4E756A00630365 /* tinystr.cpp in Sources */,
 				F23CC7AF1F4E740900630365 /* main.cpp in Sources */,
@@ -558,6 +556,7 @@
 				F23CC7B41F4E740900630365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
