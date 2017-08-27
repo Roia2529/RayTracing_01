@@ -153,6 +153,7 @@
 		F23CC8BF1F50A06400630365 /* simplescene.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simplescene.xml; sourceTree = "<group>"; };
 		F23CC8C01F50A06400630365 /* spherescene.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = spherescene.xml; sourceTree = "<group>"; };
 		F23CC8C11F50A7E000630365 /* viewport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = viewport.cpp; sourceTree = "<group>"; };
+		F23CC8C31F523B0900630365 /* prj1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = prj1.html; path = RayTracingP01/prj1.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +172,7 @@
 		F23CC7A21F4E740900630365 = {
 			isa = PBXGroup;
 			children = (
+				F23CC8C31F523B0900630365 /* prj1.html */,
 				F23CC7AC1F4E740900630365 /* Products */,
 				F23CC7AD1F4E740900630365 /* RayTracingP01 */,
 				F23CC7B51F4E741B00630365 /* Frameworks */,

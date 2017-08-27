@@ -80,8 +80,9 @@ void setPixelblack(int index){
     (color_pixel+ index)->r=0;
     (color_pixel+ index)->g=0;
     (color_pixel+ index)->b=0;
-    //float* zb_pixel = renderImage.GetZBuffer();
-    //zb_pixel[index] = BIGFLOAT;
+    float* zb_pixel = renderImage.GetZBuffer();
+    //cout<< "index: "<<index<<"\n";
+    zb_pixel[index] = BIGFLOAT;
     		
 }	
 
@@ -91,8 +92,8 @@ void setPixelwhite(int index, const HitInfo hinfo){
     (color_pixel+ index)->g=255;
     (color_pixel+ index)->b=255;
     
-    //float* zb_pixel = renderImage.GetZBuffer();
-    //*(zb_pixel+ index) = hinfo.z;
+    float* zb_pixel = renderImage.GetZBuffer();
+    *(zb_pixel+ index) = hinfo.z;
     	
 }
 void BeginRender()
@@ -118,8 +119,8 @@ void BeginRender()
     Matrix3 m(x_new,camera.up, y_new);
 
 
-    for(int j=0;j<camera.imgWidth;j++){
-    	for(int i=0;i<camera.imgHeight;i++){
+    for(int j=0;j<camera.imgHeight;j++){
+    	for(int i=0;i<camera.imgWidth;i++){
     		Point3 tmp(i*u,j*v,0);
     		tmp+=b; 
     		Ray ray_pixel(camera.pos,tmp);
@@ -157,7 +158,7 @@ void StopRender(){
 int main(int argc, const char * argv[]) {
     
     //const char *file = "simplescene.xml"; //can't load the file
-    const char *file = "/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/spherescene.xml";
+    const char *file = "/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/simplescene.xml";
     //const char *file = "spherescene.xml";
     LoadScene(file);
     ShowViewport();
