@@ -145,12 +145,16 @@ void BeginRender()
             }
     	}
     }
-    cout<<"Rendering finished\n";
     
+    cout << "Saving z-buffer image...\n";
+    renderImage.ComputeZBufferImage();
+    renderImage.SaveZImage("/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/prj1.jpg");
+    //renderImage.SaveImage("/Users/hsuanlee/Documents/Cpp/RayTracingP01/RayTracingP01/prj1.jpg");
 }
 
 void StopRender(){
-    
+    //cout << "Saving z-buffer image...\n";
+    //renderImage.SaveZImage("prj1");
     
 }
 
@@ -162,7 +166,6 @@ int main(int argc, const char * argv[]) {
     //const char *file = "spherescene.xml";
     LoadScene(file);
     ShowViewport();
-    // insert code here...
-    cout << "Exit!\n";
+    
     return 0;
 }
