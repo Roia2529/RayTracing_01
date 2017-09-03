@@ -38,7 +38,7 @@ bool Sphere::IntersectRay( const Ray &ray, HitInfo &hitinfo, int hitSide ) const
 		float t1 = (-b+sqrtf(insqrt))/(a*2);
 		float t2 = (-b-sqrtf(insqrt))/(a*2);
 		float prez = hitinfo.z;
-
+        
         hitinfo.z = min(t1,t2);
         if(hitinfo.z<0)
         	return false;
@@ -121,10 +121,11 @@ void BeginRender()
 
     for(int j=0;j<camera.imgHeight;j++){
     	for(int i=0;i<camera.imgWidth;i++){
+    //int i=400,j=300;
     		Point3 tmp(i*u,j*v,0);
     		tmp+=b; 
     		Ray ray_pixel(camera.pos,tmp);
-    		ray_pixel.dir=m*(ray_pixel.dir);
+    		//ray_pixel.dir=m*(ray_pixel.dir);
     		ray_pixel.dir.Normalize();
 
     		HitInfo hitinfo;
